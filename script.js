@@ -4,6 +4,7 @@ const countryCodeSelect = document.querySelector('.countryCode');
 const phoneNumberInput = document.querySelector('.phoneNumber');
 const submitButton = document.querySelector('.submit');
 const contactsList = document.querySelector('.contactsList');
+const messageDiv = document.querySelector('.message'); // Adicionando um espaço para exibir a mensagem de erro
 let contacts = [];
 
 function addContact() {
@@ -14,6 +15,13 @@ function addContact() {
 
   if (!firstName || !lastName || !phoneNumber) {
       alert("Por favor, preencha todos os campos.");
+      return;
+  }
+
+  const phoneExists = contacts.some(contact => contact.phoneNumber === phoneNumber);
+  if (phoneExists) {
+      messageDiv.textContent = "Phone number already exists.";
+      messageDiv.style.color = "red";
       return;
   }
 
@@ -28,6 +36,8 @@ function addContact() {
   firstNameInput.value = '';
   lastNameInput.value = '';
   phoneNumberInput.value = '';
+  messageDiv.textContent = '';
+
   renderContacts();
 }
 
