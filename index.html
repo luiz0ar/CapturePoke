@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Phone Book</title>
 </head>
 <body>
     <h1>Phone Book</h1>
@@ -13,10 +13,10 @@
         <input class="lastName" type="text" value="" placeholder="Last Name"/>
         <label for="country-code" placeholder="Country"></label>
         <select name="country" class="countryCode">
-          <option value="+55">Brasil</option>
-          <option value="+1">United States</option>
-          <option value="+54">Argentina</option>
-          <option value="+44">Reino Unido</option>
+            <option value="+55">Brasil</option>
+            <option value="+1">United States</option>
+            <option value="+54">Argentina</option>
+            <option value="+44">Reino Unido</option>
         </select>
         <input class="phoneNumber" type="number" value="" placeholder="Number"/>
         <b></b>
@@ -25,13 +25,12 @@
 
     <div class="contactList">
         <h3>Contacts</h3>
-        <ul class="contactsList">
-            <li>
-
-            </li>
-        </ul>
+        <button class="removeSelectedBtn" style="display:none;">Remove Contacts</button>
+        <button class="cancelBtn" style="display:none;">Cancel</button>
+        <ul class="contactsList"></ul>
     </div>
     <div class="message"></div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

@@ -1,80 +1,66 @@
-/* Estilos para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaeaea;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Estilos do título */
 h1 {
-    text-align: center;
-    color: #333;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
-/* Caixa de entrada de texto */
 .text-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
 }
 
 .text-box input, .text-box select, .text-box button {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
     border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-.text-box input[type="number"] {
-    -webkit-appearance: none;  /* Remover aparência padrão no WebKit (Chrome, Safari, etc.) */
-    -moz-appearance: textfield; /* Remover aparência padrão no Firefox */
-    appearance: none; /* Remover aparência padrão no futuro navegador */
-    padding-left: 10px;  /* Ajusta o preenchimento à esquerda */
-}
-
-/* Estilo de foco nos inputs */
 .text-box input:focus, .text-box select:focus, .text-box button:focus {
+    border-color: #3498db;
     outline: none;
-    border-color: #007BFF;
 }
 
-/* Estilo para o botão */
-.text-box button {
-    background-color: #007BFF;
+.submit {
+    background-color: #3498db;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.text-box button:hover {
-    background-color: #0056b3;
+.submit:hover {
+    background-color: #2980b9;
 }
 
-/* Estilo da mensagem de erro */
 .message {
-    color: red;
+    color: #e74c3c;
     font-size: 14px;
-    text-align: center;
     margin-top: 10px;
 }
 
-/* Estilo para a lista de contatos */
 .contactList {
-    width: 300px;
-    background-color: white;
+    background-color: #ffffff;
+    width: 320px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 .contactsList {
@@ -84,27 +70,53 @@ h1 {
 }
 
 .contactsList li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-    color: #333;
-}
-
-.contactsList li:last-child {
-    border-bottom: none;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .contactsList li:hover {
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 600px) {
-    .text-box {
-        width: 90%;
-    }
+.removeSelectedBtn, .cancelBtn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-    .contactList {
+.removeSelectedBtn:hover, .cancelBtn:hover {
+    background-color: #c0392b;
+}
+
+.removeSelectedBtn {
+    margin-right: 4%;
+}
+
+.cancelBtn {
+    background-color: #95a5a6;
+}
+
+.cancelBtn:hover {
+    background-color: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+    .text-box, .contactList {
         width: 90%;
     }
 }
