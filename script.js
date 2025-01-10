@@ -33,10 +33,23 @@ function addContact() {
 
 function renderContacts() {
   contactsList.innerHTML = '';
+  contacts.sort((a, b) => {
+    const nameA = a.firstName + ' ' + a.lastName;
+    const nameB = b.firstName + ' ' + b.lastName;
+    
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
   contacts.forEach(contact => {
       const listItem = document.createElement('li');
-      listItem.textContent = `${contact.firstName} ${contact.lastName} (${contact.countryCode})${contact.phoneNumber}`;
+      listItem.textContent = `${contact.firstName} ${contact.lastName} (${contact.countryCode}) ${contact.phoneNumber}`;
       contactsList.appendChild(listItem);
   });
 }
+
 submitButton.addEventListener('click', addContact);
