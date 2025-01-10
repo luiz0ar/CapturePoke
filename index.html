@@ -7,10 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TESTE</h1>
+    <h1>Phone Book</h1>
     <div class="text-box">
-        <a></a>
-        <input class="name" type="text" value="" placeholder="Digite Aqui"/>
+        <input class="firstName" type="text" value="" placeholder="First Name"/>
+        <input class="lastName" type="text" value="" placeholder="Last Name"/>
+        <label for="country-code" placeholder="Country"></label>
+        <select name="country" class="countryCode">
+          <option value="+55">Brasil</option>
+          <option value="+1">United States</option>
+          <option value="+54">Argentina</option>
+          <option value="+44">Reino Unido</option>
+        </select>
+        <input class="phoneNumber" type="number" value="" placeholder="Number"/>
+        <b></b>
+        <button class="submit">Confirmar</button>
+    </div>
+    <div class="contactList">
+        <h3>Contacts</h3>
+        <ul class="contactsList">
+            <li>
+            </li>
+        </ul>
     </div>
 </body>
 <script src="script.js"></script>
