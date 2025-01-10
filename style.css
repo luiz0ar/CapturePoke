@@ -35,9 +35,13 @@ h1 {
 }
 
 .text-box input[type="number"] {
-    -moz-appearance: textfield;
+    -webkit-appearance: none;  /* Remover aparência padrão no WebKit (Chrome, Safari, etc.) */
+    -moz-appearance: textfield; /* Remover aparência padrão no Firefox */
+    appearance: none; /* Remover aparência padrão no futuro navegador */
+    padding-left: 10px;  /* Ajusta o preenchimento à esquerda */
 }
 
+/* Estilo de foco nos inputs */
 .text-box input:focus, .text-box select:focus, .text-box button:focus {
     outline: none;
     border-color: #007BFF;
