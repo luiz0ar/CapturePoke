@@ -1,0 +1,106 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos do título */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Caixa de entrada de texto */
+.text-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.text-box input, .text-box select, .text-box button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.text-box input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.text-box input:focus, .text-box select:focus, .text-box button:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Estilo para o botão */
+.text-box button {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.text-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da mensagem de erro */
+.message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo para a lista de contatos */
+.contactList {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactsList li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+.contactsList li:last-child {
+    border-bottom: none;
+}
+
+.contactsList li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .text-box {
+        width: 90%;
+    }
+
+    .contactList {
+        width: 90%;
+    }
+}
