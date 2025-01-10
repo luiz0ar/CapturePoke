@@ -25,6 +25,12 @@ function addContact() {
       return;
   }
 
+if(phoneNumber.length < 5 || phoneNumber.length > 15){
+  messageDiv.textContent = "This phone is not valid.";
+  messageDiv.style.color = "red";
+  return;
+}
+
   const contact = {
       firstName: firstName,
       lastName: lastName,
